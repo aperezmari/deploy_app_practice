@@ -1,6 +1,10 @@
 name: Run Container Locally
 
 on:
+  pull_request:
+    branches:
+      - master
+
   workflow_dispatch:
 
 jobs:
