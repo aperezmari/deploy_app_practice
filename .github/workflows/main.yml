@@ -1,0 +1,27 @@
+name: Run Container Locally
+
+on:
+  pull_request:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  run-container:
+    runs-on: self-hosted
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Build the Docker image
+      - name: Build Docker Image
+        run: |
+          docker build -t my-app:latest .
+
+      # Run the Docker container I select the ports 3001:3000 because my local i can't run on 3000:3000
+      - name: Run Docker Container
+        run: |
+          docker run -d -p 3001:3000 --name my-app my-app:latest
