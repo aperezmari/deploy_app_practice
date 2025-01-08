@@ -6,4 +6,4 @@ My intention was to practice DevOps technologies, specifically developing a depl
 
 You are welcome to use this pipeline if you need it. The information is not hardcoded for obvious reasons. 
 
-If you need help, feel free to contact me on Discord:
+If you need help, feel free to contact me on Discord: allen\(?#3691
